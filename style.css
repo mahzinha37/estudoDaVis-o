@@ -1,19 +1,17 @@
 :root {
-    --primary-gradient: linear-gradient(135deg, #ff4e50, #f9d423);
-    --secondary-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
-    --accent-gradient: linear-gradient(135deg, #11998e, #38ef7d);
-    --bg-gradient: linear-gradient(135deg, #ffe0c3 0%, #ffc3a0 100%);
-    --card-bg: #ffffff;
-    --text-color: #2d3436;
-    --border-color: #ffe0c3;
+    --fox-orange: #d9531e;
+    --fox-amber: #e67e22;
+    --fox-cream: #fdfaf6;
+    --fox-chestnut: #3d2314;
+    --fox-bg: #f4efe9;
+    --fox-border: #e2d7cb;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: var(--bg-gradient);
-    background-attachment: fixed;
-    color: var(--text-color);
+    background-color: var(--fox-bg);
+    color: var(--fox-chestnut);
     margin: 0;
     padding: 30px 20px;
 }
@@ -21,33 +19,31 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: var(--card-bg);
+    background-color: var(--fox-cream);
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(255, 78, 80, 0.2);
-    border: 3px solid #ffffff;
+    border-radius: 16px;
+    border-top: 8px solid var(--fox-orange);
+    box-shadow: 0 8px 20px rgba(61, 35, 20, 0.08);
 }
 
 h1 {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--fox-orange);
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2.8em;
-    font-weight: 800;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
 h2 {
-    color: #ff4e50;
-    border-bottom: 3px solid #f9d423;
-    padding-bottom: 8px;
-    margin-top: 40px;
-    font-size: 1.6em;
+    color: var(--fox-chestnut);
+    border-bottom: 3px solid var(--fox-amber);
+    padding-bottom: 6px;
+    margin-top: 35px;
+    font-size: 1.5em;
 }
 
 h3 {
-    color: #2575fc;
+    color: var(--fox-orange);
     margin-top: 25px;
     margin-bottom: 8px;
     font-size: 1.2em;
@@ -57,14 +53,14 @@ p {
     margin-bottom: 15px;
 }
 
-.intro {
-    font-size: 1.2em;
+.intro, .intro-fox {
+    font-size: 1.15em;
     text-align: center;
-    color: #4a4a4a;
-    background: #fff5eb;
+    color: var(--fox-chestnut);
+    background-color: #fceee6;
     padding: 20px;
-    border-radius: 12px;
-    border-left: 5px solid #ff4e50;
+    border-radius: 10px;
+    border-left: 5px solid var(--fox-orange);
     margin-bottom: 30px;
 }
 
@@ -74,49 +70,49 @@ ul {
 }
 
 li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 li strong {
-    color: #6a11cb;
+    color: var(--fox-orange);
 }
 
-/* Tabela Super Colorida */
+
 table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     margin-top: 30px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
+    background-color: var(--fox-cream);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--fox-border);
 }
 
 th {
-    background: var(--secondary-gradient);
-    color: #ffffff;
-    font-weight: 700;
-    padding: 15px;
+    background-color: var(--fox-chestnut);
+    color: var(--fox-cream);
+    font-weight: 600;
+    padding: 14px;
     text-align: left;
-    font-size: 1.05em;
+    font-size: 1em;
 }
 
 td {
-    padding: 14px 15px;
+    padding: 12px 14px;
     text-align: left;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--fox-border);
+}
+
+td strong {
+    color: var(--fox-orange);
 }
 
 tr:nth-child(even) {
-    background-color: #f8f0ff;
-}
-
-tr:nth-child(odd) {
-    background-color: #fff9f0;
+    background-color: #f7f0e8;
 }
 
 tr:hover {
-    background-color: #e3f2fd;
-    transition: background-color 0.3s ease;
+    background-color: #fceee6;
+    transition: background-color 0.2s ease;
 }
