@@ -1,50 +1,56 @@
 :root {
-    --primary-color: #d9531e;
-    --secondary-color: #2c3e50;
-    --bg-color: #f9f9fb;
+    --primary-gradient: linear-gradient(135deg, #ff4e50, #f9d423);
+    --secondary-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
+    --accent-gradient: linear-gradient(135deg, #11998e, #38ef7d);
+    --bg-gradient: linear-gradient(135deg, #ffe0c3 0%, #ffc3a0 100%);
     --card-bg: #ffffff;
-    --text-color: #333333;
-    --border-color: #e0e0e0;
+    --text-color: #2d3436;
+    --border-color: #ffe0c3;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: var(--bg-color);
+    background: var(--bg-gradient);
+    background-attachment: fixed;
     color: var(--text-color);
     margin: 0;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 78, 80, 0.2);
+    border: 3px solid #ffffff;
 }
 
 h1 {
-    color: var(--primary-color);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
-    margin-bottom: 15px;
-    font-size: 2em;
+    margin-bottom: 20px;
+    font-size: 2.8em;
+    font-weight: 800;
 }
 
 h2 {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 6px;
-    margin-top: 35px;
-    font-size: 1.4em;
+    color: #ff4e50;
+    border-bottom: 3px solid #f9d423;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    font-size: 1.6em;
 }
 
 h3 {
-    color: var(--primary-color);
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 1.1em;
+    color: #2575fc;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    font-size: 1.2em;
 }
 
 p {
@@ -52,9 +58,13 @@ p {
 }
 
 .intro {
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-align: center;
-    color: #555555;
+    color: #4a4a4a;
+    background: #fff5eb;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #ff4e50;
     margin-bottom: 30px;
 }
 
@@ -64,34 +74,49 @@ ul {
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
+li strong {
+    color: #6a11cb;
+}
+
+/* Tabela Super Colorida */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 30px;
     background-color: var(--card-bg);
+    border-radius: 12px;
     overflow: hidden;
-    border-radius: 8px;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 th {
-    background-color: var(--secondary-color);
+    background: var(--secondary-gradient);
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 700;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.05em;
+}
+
+td {
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 tr:nth-child(even) {
-    background-color: #f8f9fa;
+    background-color: #f8f0ff;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff9f0;
 }
 
 tr:hover {
-    background-color: #f1f3f5;
+    background-color: #e3f2fd;
+    transition: background-color 0.3s ease;
 }
